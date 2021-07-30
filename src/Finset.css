@@ -1,0 +1,9 @@
+.FinsetImage {
+    position: relative;
+    top: -1700px;
+    left: 45px;
+    width: 1300px;
+    height: 300px;
+    
+    cursor: pointer;
+}

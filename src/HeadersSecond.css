@@ -1,0 +1,64 @@
+.leftImage {
+    background: #F11843;
+}
+
+img {
+    height: 250px;
+    width: 600px;
+    margin-left: 50px;
+    
+    
+}
+.searchComment {
+position: relative;
+left: 700px;
+top: -225px;
+color: white;
+
+font-weight: 700;
+font-size: 17px;
+
+float: left;
+
+}
+
+.searchArea {
+    position: relative;
+    left: 310px;
+    top: -170px;
+    width: 600px;
+    height: 65px;
+    border-radius: 30px;
+    border: none;
+    font-size: 30px;
+    outline: 0;
+    
+
+}
+.SearchIcon {
+    position: relative;
+    left: 250px;
+    top: -155px;
+    cursor: pointer;
+}
+button {
+    position: relative;
+    left: 690px;
+    top: -1590px;
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    transition-duration: 0.2s;
+    border: none;
+
+    cursor: pointer;
+}
+button:hover {
+    background-color: #66180ef6;
+  color: white;
+}

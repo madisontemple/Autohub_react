@@ -1,0 +1,55 @@
+.FourPopularCars {
+    position: relative;
+    top: -1500px;
+    left: 65px;
+    font-size: 25px;
+}
+
+.MainImage {
+    position: relative;
+    top: -1500px;
+    left: -30px;
+    width: 600px;
+    height: 600px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.FirstImage {
+    position: relative;
+    top: -1830px;
+    left: -45px;
+    width: 350px;
+    height: 270px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.SecondImage {
+    position: relative;
+    top: -2101px;
+    left: 980px;
+    width: 350px;
+    height: 270px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.ThirdImage {
+    position: relative;
+    top: -1775px;
+    left: 205px;
+    width: 350px;
+    height: 270px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.FourthImage {
+    position: relative;
+    top: -1773px;
+    left: 180px;
+    width: 350px;
+    height: 270px;
+    border-radius: 30px;
+    cursor: pointer;
+}

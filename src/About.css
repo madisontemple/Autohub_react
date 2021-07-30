@@ -1,0 +1,32 @@
+.About{
+    display: block;
+    background-color: tomato;
+}
+
+.FourList {
+    position: relative;
+    top: -1690px;
+    left: 20px;
+    list-style: none;
+    float: left;
+    margin-left: 40px;
+    font-size: 15px;
+    font-weight: 800;
+    color: slategrey;
+    
+}
+.CompanyNumberOne {
+    position: relative;
+    font-size: 15px;
+    top: -1600px;
+    left: -350px;
+}
+
+.CompanyNumberTwo {
+    position: relative;
+    top: -1633px;
+    left: 200px;
+    
+}
+
+
