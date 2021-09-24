@@ -10,6 +10,7 @@ function CCenter() {
   const BuyClick = () => history.push("./Buy");
   const SellClick = () => history.push("./Sell");
   const ManagedClick = () => history.push("./Managed");
+  const AboutClick = () => history.push("./AboutAutohub");
   const CCenterClick = () => history.push("./CCenter");
   const JoinClick = () => history.push("./Join");
   const LoginClick = () => history.push("./Login");
@@ -22,58 +23,18 @@ function CCenter() {
 
   return (
     <div>
-      <Menu>
-        <AutohubLogo
-          src="/images/AUTOHUB Logo.png"
-          alt="오토허브 로고"
-          onClick={HomeClick}
-        />
-
-        <div style={{ display: "flex", width: "100%" }}>
-          <HeaderList>
-            <LeftsideMenuList button type="button" onClick={BuyClick}>
-              살때
-            </LeftsideMenuList>
-            <a
-              href="http://www.ajsellcar.co.kr/alliance/autohub.do"
-              target="_blank"
-              style={{ textDecoration: "none" }}
-            >
-              <LeftsideMenuList button type="button">
-                팔때
-              </LeftsideMenuList>
-            </a>
-            <LeftsideMenuList button type="button" onClick={ManagedClick}>
-              직영차
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={CCenterClick}>
-              고객센터
-            </LeftsideMenuList>
-          </HeaderList>
-
-          <Rightside>
-            <RightsideMenuList button type="button" onClick={LoginClick}>
-              로그인
-            </RightsideMenuList>
-
-            <RightsideMenuList button type="button" onClick={JoinClick}>
-              회원가입
-            </RightsideMenuList>
-          </Rightside>
-        </div>
-      </Menu>
+      
 
       <div className="InputPart">
-        <div className="Input" style={{ padding: "15px 20px" }}>
+        <div className="Input" style={{ padding: "15px 130px" }}>
           <SearchInput type="text"></SearchInput>
           <FaSearch
             style={{
               width: "30px",
               height: "30px",
               position: "relative",
-              left: "40px",
-
-              bottom: "73px",
+              left: "35px",
+              bottom: "84px",
               color: "#f11843",
               cursor: "pointer",
             }}
@@ -144,7 +105,7 @@ const SearchInput = styled.input`
   outline-width: 0;
   margin-left: 430px;
   position: relative;
-  bottom: 80px;
+  bottom: 90px;
   left: 90px;
 `;
 const Buttons = styled.div`

@@ -10,6 +10,7 @@ function Managed() {
   const BuyClick = () => history.push("./Buy");
   const SellClick = () => history.push("./Sell");
   const ManagedClick = () => history.push("./Managed");
+  const AboutClick = () => history.push("./AboutAutohub");
   const CCenterClick = () => history.push("./CCenter");
   const JoinClick = () => history.push("./Join");
   const LoginClick = () => history.push("./Login");
@@ -22,46 +23,7 @@ function Managed() {
 
   return (
     <div>
-      <Menu>
-        <AutohubLogo
-          src="/images/AUTOHUB Logo.png"
-          alt="오토허브 로고"
-          onClick={HomeClick}
-        />
-
-        <div style={{ display: "flex", width: "100%" }}>
-          <HeaderList>
-            <LeftsideMenuList button type="button" onClick={BuyClick}>
-              살때
-            </LeftsideMenuList>
-            <a
-              href="http://www.ajsellcar.co.kr/alliance/autohub.do"
-              target="_blank"
-              style={{ textDecoration: "none" }}
-            >
-              <LeftsideMenuList button type="button">
-                팔때
-              </LeftsideMenuList>
-            </a>
-            <LeftsideMenuList button type="button" onClick={ManagedClick}>
-              직영차
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={CCenterClick}>
-              고객센터
-            </LeftsideMenuList>
-          </HeaderList>
-
-          <Rightside>
-            <RightsideMenuList button type="button" onClick={LoginClick}>
-              로그인
-            </RightsideMenuList>
-
-            <RightsideMenuList button type="button" onClick={JoinClick}>
-              회원가입
-            </RightsideMenuList>
-          </Rightside>
-        </div>
-      </Menu>
+      
 
       <div className="BannerPart">
         <img

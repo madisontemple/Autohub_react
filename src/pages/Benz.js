@@ -10,6 +10,7 @@ function Benz() {
   const BuyClick = () => history.push("./Buy");
   const SellClick = () => history.push("./Sell");
   const ManagedClick = () => history.push("./Managed");
+  const AboutClick = () => history.push("./AboutAutohub");
   const CCenterClick = () => history.push("./CCenter");
   const JoinClick = () => history.push("./Join");
   const LoginClick = () => history.push("./Login");
@@ -22,40 +23,7 @@ function Benz() {
 
   return (
     <div>
-      <Menu>
-        <AutohubLogo
-          src="/images/AUTOHUB Logo.png"
-          alt="오토허브 로고"
-          onClick={HomeClick}
-        />
-
-        <div style={{ display: "flex", width: "100%" }}>
-          <HeaderList>
-            <LeftsideMenuList button type="button" onClick={BuyClick}>
-              살때
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={SellClick}>
-              팔때
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={ManagedClick}>
-              직영차
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={CCenterClick}>
-              고객센터
-            </LeftsideMenuList>
-          </HeaderList>
-
-          <Rightside>
-            <RightsideMenuList button type="button" onClick={LoginClick}>
-              로그인
-            </RightsideMenuList>
-
-            <RightsideMenuList button type="button" onClick={JoinClick}>
-              회원가입
-            </RightsideMenuList>
-          </Rightside>
-        </div>
-      </Menu>
+     
 
       <div className="InputPart">
         <div className="Input" style={{ padding: "15px 20px" }}>
@@ -169,7 +137,7 @@ const SearchInput = styled.input`
   padding-left: 30px;
   outline-width: 0;
   margin-left: 430px;
-  margin-top: 30px;
+  margin-top: 20px;
 `;
 const Buttons = styled.div`
   display: flex;

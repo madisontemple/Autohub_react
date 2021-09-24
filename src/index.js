@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Buy from "./pages/Buy";
 import Sell from "./pages/Sell";
 import Managed from "./pages/Managed";
+import AboutAutohub from "./pages/AboutAutohub";
 import CCenter from "./pages/CCenter";
 import Benz from "./pages/Benz";
 import SearchResult from "./pages/SearchResult";

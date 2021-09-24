@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Search from "../icon/search-solid.svg";
-
+// import Navbar from "./Navbar";
 import { SearchBox } from "react-instantsearch-dom";
 import { useHistory } from "react-router-dom";
 
@@ -12,14 +12,15 @@ import "../index.css";
 
 function Home() {
   const history = useHistory();
-  const BuyClick = () => history.push("./Buy");
-  const SellClick = () => history.push("./Sell");
-  const ManagedClick = () => history.push("./Managed");
-  const CCenterClick = () => history.push("./CCenter");
-  const JoinClick = () => history.push("./Join");
-  const LoginClick = () => history.push("./Login");
+  // const BuyClick = () => history.push("./Buy");
+  // const SellClick = () => history.push("./Sell");
+  // const ManagedClick = () => history.push("./Managed");
+  // const AboutAutohub = () => history.push("./AboutAutohub");
+  // const CCenterClick = () => history.push("./CCenter");
+  // const JoinClick = () => history.push("./Join");
+  // const LoginClick = () => history.push("./Login");
 
-  const SearchClick = () => history.push("./SearchResult.js");
+  const SearchClick = () => history.push("./SearchResult");
   const HyundaiClick = () => history.push("./Hyundai");
   const KiaClick = () => history.push("./Kia");
   const BenzClick = () => history.push("./Benz");
@@ -34,42 +35,6 @@ function Home() {
   return (
     <div style={{}}>
       <Header>
-        <Menu>
-          <AutohubLogo src="/images/AUTOHUB Logo.png" alt="오토허브 로고" />
-
-          <div style={{ display: "flex", width: "100%" }}>
-            <HeaderList>
-              <LeftsideMenuList button type="button" onClick={BuyClick}>
-                살때
-              </LeftsideMenuList>
-              <a
-                href="http://www.ajsellcar.co.kr/alliance/autohub.do"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <LeftsideMenuList button type="button">
-                  팔때
-                </LeftsideMenuList>
-              </a>
-              <LeftsideMenuList button type="button" onClick={ManagedClick}>
-                직영차
-              </LeftsideMenuList>
-              <LeftsideMenuList button type="button" onClick={CCenterClick}>
-                고객센터
-              </LeftsideMenuList>
-            </HeaderList>
-
-            <Rightside>
-              <RightsideMenuList button type="button" onClick={LoginClick}>
-                로그인
-              </RightsideMenuList>
-              <RightsideMenuList button type="button" onClick={JoinClick}>
-                회원가입
-              </RightsideMenuList>
-            </Rightside>
-          </div>
-        </Menu>
-
         <Header2>
           <div style={{ height: 300, display: "flex", width: "100%" }}>
             <LeftImage src="/images/Autohub.HeadersLeft.png" />
@@ -347,9 +312,9 @@ const SearchInput = styled.input`
   width: 600px;
   height: 70px;
   border-radius: 30px;
-  border: none;
   font-size: 25px;
   padding-left: 30px;
+  border: none;
   outline-width: 0;
 `;
 //  const SearchIcon = styled.FaSearch`

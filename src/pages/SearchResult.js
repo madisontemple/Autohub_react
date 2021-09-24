@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import "../index.css";
 
 function SearchResult() {
   const history = useHistory();
@@ -10,11 +11,11 @@ function SearchResult() {
   const BuyClick = () => history.push("./Buy");
   const SellClick = () => history.push("./Sell");
   const ManagedClick = () => history.push("./Managed");
+  const AboutClick = () => history.push("./AboutAutohub");
   const CCenterClick = () => history.push("./CCenter");
   const JoinClick = () => history.push("./Join");
   const LoginClick = () => history.push("./Login");
 
-  const SearchClick = () => history.push("./SearchResult.js");
   const HyundaiClick = () => history.push("./Hyundai");
   const KiaClick = () => history.push("./Kia");
   const BenzClick = () => history.push("./Benz");
@@ -23,42 +24,9 @@ function SearchResult() {
 
   return (
     <div>
-      <Menu>
-        <AutohubLogo
-          src="/images/AUTOHUB Logo.png"
-          alt="오토허브 로고"
-          onClick={HomeClick}
-        />
+      
 
-        <div style={{ display: "flex", width: "100%" }}>
-          <HeaderList>
-            <LeftsideMenuList button type="button" onClick={BuyClick}>
-              살때
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={SellClick}>
-              팔때
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={ManagedClick}>
-              직영차
-            </LeftsideMenuList>
-            <LeftsideMenuList button type="button" onClick={CCenterClick}>
-              고객센터
-            </LeftsideMenuList>
-          </HeaderList>
-
-          <Rightside>
-            <RightsideMenuList button type="button" onClick={LoginClick}>
-              로그인
-            </RightsideMenuList>
-
-            <RightsideMenuList button type="button" onClick={JoinClick}>
-              회원가입
-            </RightsideMenuList>
-          </Rightside>
-        </div>
-      </Menu>
-
-      <div className="InputPart">
+      {/* <div className="InputPart">
         <div className="Input" style={{ padding: "15px 20px" }}>
           <SearchInput type="text"></SearchInput>
           <FaSearch
@@ -66,9 +34,9 @@ function SearchResult() {
               width: "30px",
               height: "30px",
               position: "relative",
-              left: "40px",
+              right: "50px",
 
-              bottom: "73px",
+              top: "5px",
               color: "#f11843",
               cursor: "pointer",
             }}
@@ -76,8 +44,37 @@ function SearchResult() {
         </div>
       </div>
 
-      <h2>회원가입 파트</h2>
-      <p>아직 진행준입니다.</p>
+      <div style={{}}>
+        <span
+          style={{ marginLeft: "90px", fontSize: "30px", fontWeight: "700" }}
+        >
+          차량검색
+        </span>
+        <span style={{ marginLeft: "20px" }}>최근검색조건</span>
+      </div>
+
+      <div>
+        <p style={{ marginTop: "40px", marginLeft: "90px", fontWeight: "700" }}>
+          추천필터
+        </p>
+        <Buttons>
+          <Button button type="button" onClick={HyundaiClick}>
+            현대
+          </Button>
+          <Button button type="button" onClick={KiaClick}>
+            기아
+          </Button>
+          <Button button type="button" onClick={BenzClick}>
+            벤츠
+          </Button>
+          <Button button type="button" onClick={BmwClick}>
+            Bmw
+          </Button>
+          <Button button type="button" onClick={GenesisClick}>
+            제네시스
+          </Button>
+        </Buttons>
+      </div> */}
     </div>
   );
 }
@@ -133,17 +130,15 @@ const RightsideMenuList = styled.div`
 `;
 
 const SearchInput = styled.input`
-  width: 400px;
-  height: 40px;
+  width: 500px;
+  height: 50px;
   border-radius: 30px;
   border: solid #f11843 2px;
   font-size: 25px;
   padding-left: 30px;
   outline-width: 0;
   margin-left: 430px;
-  position: relative;
-  bottom: 80px;
-  left: 90px;
+  margin-top: 30px;
 `;
 const Buttons = styled.div`
   display: flex;
