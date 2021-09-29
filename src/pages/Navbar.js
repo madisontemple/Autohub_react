@@ -62,7 +62,7 @@ function Navbar() {
           </Rightside>
         </div>
       </Menu>
-      <AboutMenuPart>
+      {/* <AboutMenuPart>
         <AboutListUl>
           <AboutList>단지소개</AboutList>
           <AboutList>층별안내</AboutList>
@@ -70,7 +70,7 @@ function Navbar() {
           <AboutList>특별 프로모션</AboutList>
           <AboutList>오시는길</AboutList>
         </AboutListUl>
-      </AboutMenuPart>
+      </AboutMenuPart> */}
      
       
       

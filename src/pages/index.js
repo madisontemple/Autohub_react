@@ -18,3 +18,12 @@ export { default as Shop1 } from "./Shop1";
 export { default as Shop2 } from "./Shop2";
 export { default as Shop3 } from "./Shop3";
 export { default as Shop4 } from "./Shop4";
+
+
+export { default as Floor } from "./Floor";
+export { default as Contact } from "./Contact";
+
+
+export { default as Map } from "../shared/Map";
+
+
