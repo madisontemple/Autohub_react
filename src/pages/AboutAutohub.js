@@ -81,7 +81,7 @@ function AboutAutohub() {
           이 밖에도 병원, 볼링장, 스크린 골프장 등 다양한 생활시설도 입점해 있어
           자동차 복합 문화 공간으로서 <br />
           완벽한 모습을 갖추고 있습니다.
-        </p>
+            </p>
       </IntroPart>
       <BuildArea>
         <h2>세부 면적</h2>
@@ -211,6 +211,9 @@ function AboutAutohub() {
               볼링장, 골프장, 헬스장 <br/>
               키즈 카페</Td1>
             </tr>
+           
+
+          
           
         </Table1>
 
@@ -222,6 +225,7 @@ function AboutAutohub() {
     <p>최적의 교통 환경과 입지<br />
     수원신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 남부 30분 이내에 도착 가능</p>
     </LocationPart>
+    
 
     <EightPoints>
       <h2>오토허브 입점 포인트 8가지</h2>

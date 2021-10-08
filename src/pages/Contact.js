@@ -1,7 +1,8 @@
 import React , { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-
+import { BiBus } from "react-icons/bi";
+import { FaTrain } from "react-icons/fa";
 // import "../index.css";
 
 
@@ -52,15 +53,17 @@ function Contact() {
      </MapPart>
   <TransitPart>
       <h2 style={{paddingTop:"70px",marginLeft:"80px"}}>대중교통 안내</h2>
-        <Subway>지하철<br /><br />
+        <Subway><FaTrain />지하철<br /><br />
         - 분당선 청명역 1번 출구(버스 환승)<br /><br />
         - 분당선 상갈역 2번 출구(버스 환승)</Subway>
 
-        <Bus>버스<br /><br />
-        - 시내버스 10,10-5,27,27-1,37,55,66,66-4,28-1,28-2,28-3<br /><br />
-        - 시외버스 M5107,1112,5006,5007,5100,G5100,8327,8424,8423,8448,8449</Bus>
+        <Bus><BiBus style={{width:"50px",height:"50px"}} /> 버스<br />
+        
+       <p>- 시내버스 10,10-5,27,27-1,37,55,66,66-4,28-1,28-2,28-3<br /><br />
+        - 시외버스 M5107,1112,5006,5007,5100,G5100,8327,8424,8423,8448,8449</p> </Bus>
   </TransitPart>
-
+    
+    
   </div>
   )
 }
