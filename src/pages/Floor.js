@@ -42,7 +42,7 @@ function Floor() {
       </AboutMenuPart>
 
       <FloorTable>
-        <h2>층별가이드</h2>
+        <h2 style={{marginLeft:"90px"}}>층별가이드</h2>
         <HR></HR>
         <Comment>
           "아래의 각 층 <Comment1>클릭</Comment1>시 상세안내로 이동할 수
@@ -61,41 +61,42 @@ function Floor() {
   </Tr>
 
   </Table> */}
-        <InfoTable style={{}}>
-          <CTable>
-            <Table1 style={{ marginTop: "20px"}}>
+        <InfoTable style={{ }}>
+          
+            
+            
+            <Table1 style={{width:"260px",marginRight:"100px" }}>
               <Tr1>
-                <Th1 style={{ width: "300px" }}>C동</Th1>
+                <Th1 style={{  }}>C동</Th1>
               </Tr1>
-            </Table1>
-            <Table1 style={{ marginTop: "-2px" }}>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>4F</Th2>
+                
                 <Th2>
-                  <span> 자동차 경매장</span>
+                <span style={{marginRight:"50px"}}>4F</span>
+                  <span style={{paddingRight:"80px"}}> 자동차 경매장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>3F</Th2>
+                {/* <Th2 style={{ width: "80px" }}>3F</Th2> */}
                 <Th2>
-                  <span>
-                    세차/광택 <br />
-                    타이어/휠 복원
+                <span style={{marginRight:"65px", position:"relative",top:"10px" }}>3F</span>
+                  <span style={{paddingRight:"90px"}} >
+                    세차 / 광택 <br />
                   </span>
+                    <span>타이어 /휠 복원</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>2F</Th2>
+                {/* <Th2 style={{ width: "80px" }}>2F</Th2> */}
                 <Th2>
-                  <span>
-                    차량 정비
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>2F</span>
+                  <span style={{paddingRight:"80px"}}> 차량 정비</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>1F</Th2>
+                {/* <Th2 style={{ width: "80px" }}>1F</Th2> */}
                 <Th2>
+                <span>1F</span>
                   <span>
                     성능점검장
                     <br />
@@ -103,8 +104,9 @@ function Floor() {
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B1F</Th2>
+                {/* <Th2 style={{ width: "80px" }}>B1F</Th2> */}
                 <Th2>
+                <span>B1F</span>
                   <span>
                     자동차 용품 전문점
                     <br />
@@ -112,8 +114,9 @@ function Floor() {
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B2F</Th2>
+                {/* <Th2 style={{ width: "80px" }}>B2F</Th2> */}
                 <Th2>
+                <span>B2F</span>
                   <span>
                     엔카 포도존
                     <br />
@@ -121,8 +124,9 @@ function Floor() {
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B3F</Th2>
+                {/* <Th2 style={{ width: "80px" }}>B3F</Th2> */}
                 <Th2>
+                <span>B3F</span>
                   <span>
                     차량 전시장
                     <br />
@@ -130,174 +134,116 @@ function Floor() {
                 </Th2>
               </Tr1>
             </Table1>
-          </CTable>
-          <BTable style={{}}>
-            <Table1 style={{ marginTop: "20px" }}>
+          
+            <Table1 style={{ width:"250px",marginRight:"100px"}}>
               <Tr1>
-                <Th1 style={{ width: "300px" }}>B동</Th1>
+                <Th1 style={{  }}>B동</Th1>
               </Tr1>
-            </Table1>
-            <Table1 style={{ marginTop: "-2px" }}>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>4F</Th2>
+                
                 <Th2>
-                  <span>고객 주차장</span>
+                <span style={{marginRight:"50px"}}>4F</span>
+                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>3F</Th2>
                 <Th2>
-                  <span>고객 주차장</span>
+                <span style={{ marginRight:"50px"}}>3F</span>
+                  <span style={{paddingRight:"90px"}}>고객 주차장 </span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>2F</Th2>
                 <Th2>
-                  <span>
-                    고객 주차장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>2F</span>
+                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>1F</Th2>
                 <Th2>
-                  <span>
-                    고객 주차장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>1F</span>
+                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B1F</Th2>
+                
                 <Th2>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>B1F</span>
+                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B2F</Th2>
+               
                 <Th2>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>B2F</span>
+                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
+                  
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B3F</Th2>
+                
                 <Th2>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2 style={{ width: "80px" }}>B4F</Th2>
-                <Th2>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>B3F</span>
+                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
                 </Th2>
               </Tr1>
             </Table1>
-          </BTable>
-          <ATable style={{display:""}}>
-            <Table1 style={{ marginTop: "20px"  }}>
+        
+         
+            
+            
+            <Table1 style={{ width:"530px",marginRight:"60px"}}>
               <Tr1>
-                <Th1 style={{ width: "300px" }}>A동</Th1>
+                <Th1 style={{  }}>A동</Th1>
               </Tr1>
-            </Table1>
-            <Table1 style={{ marginTop: "-2px" }}>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>4F</Th2>
+                
                 <Th2>
-                  <span>
-                    볼링장,골프장,
-                    <br />
-                    <br />
-                    키즈카페,헬스장
-                  </span>
+                <span style={{marginRight:"50px"}}>4F</span>
+                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>3F</Th2>
                 <Th2>
-                  <span>
-                    매매상사,식당,카페,
-                    <br />
-                    <br />
-                    편의점,사무실
-                  </span>
+                <span style={{ marginRight:"50px"}}>3F</span>
+                  <span style={{paddingRight:"90px"}}>고객 주차장 </span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>2F</Th2>
                 <Th2>
-                  <span>
-                    매매상사,고객지원센터,
-                    <br />
-                    <br />
-                    차량등록사무소,카페,편의점
-                    <br />
-                    <br />
-                    병원,약국,중앙정원,사무실
-                  </span>
+                <span style={{marginRight:"50px"}}>2F</span>
+                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>1F</Th2>
                 <Th2>
-                  <span>
-                    매매상사,식당,카페,
-                    <br />
-                    <br />
-                    금융사,용인시 지부, 사무실
-                  </span>
+                <span style={{marginRight:"50px"}}>1F</span>
+                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B1F</Th2>
+                
                 <Th2>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>B1F</span>
+                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B2F</Th2>
+               
                 <Th2>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>B2F</span>
+                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
+                  
                 </Th2>
               </Tr1>
               <Tr1>
-                <Th2 style={{ width: "80px" }}>B3F</Th2>
+                
                 <Th2>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2 style={{ width: "80px" }}>B4F</Th2>
-                <Th2>
-                  <span>
-                    매매상사,차량 전시장
-                    <br />
-                  </span>
+                <span style={{marginRight:"50px"}}>B3F</span>
+                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
                 </Th2>
               </Tr1>
             </Table1>
-          </ATable>
+          
         </InfoTable>
       </FloorTable>
 
@@ -403,6 +349,7 @@ const AboutList = styled.li`
   display: block;
   position: relative;
   padding: 1em 1;
+  
 
   &::after {
     content: "";
@@ -424,16 +371,25 @@ const AboutList = styled.li`
 `;
 const FloorTable = styled.div`
   padding-top: 100px;
-  margin-left: 100px;
+  
 `;
 const HR = styled.hr`
-  width: 100%;
+  width: 90%;
   justify-content: center;
+  display: flex;
+ 
+  align-items: center;
+  
 `;
 const Comment = styled.span`
   font-size: 20px;
   font-weight: 700;
   font-family: inherit;
+  display: flex;
+ margin-left: 90px;
+ justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 `;
 const Comment1 = styled.span`
   font-size: 20px;
@@ -441,43 +397,51 @@ const Comment1 = styled.span`
 `;
 
 const AutohubBuilding = styled.img`
-  width: 1100px;
+  width: 80%;
   height: 200px;
-`;
-const Table = styled.table`
-  width: 30%;
-
-  margin-left: 50px;
-  border: 1px solid #444444;
-`;
-
-const Th = styled.th`
-  border: 1px solid #444444;
-  height: 60px;
-  padding: 10px;
+  margin-top: 50px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const InfoTable = styled.div`
-  padding-top: 50px;
+  
   margin-left: 30px;
   
-  flex-wrap: initial;
+  /* flex-wrap: initial; */
+  display: flex;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+ 
+
   
 `;
-const CTable = styled.div``;
-const BTable = styled.div``;
-const ATable = styled.div``;
+const CTable = styled.div`
+
+  
+`;
+const BTable = styled.div`
+
+`;
+const ATable = styled.div`
+
+`;
 
 const Table1 = styled.table`
-  margin-top: 50px;
-  width: 20%;
-  margin-left: -15px;
+  /* margin-left: auto;
+  margin-right: auto; */
   border-collapse: separate;
   border-spacing: 0 0 15px 15px;
   
+  table-layout: fixed;
   
 `;
-const Tr1 = styled.tr``;
+const Tr1 = styled.tr`
+
+`;
 const Th1 = styled.th`
   border-top: 3px solid #444444;
   border-bottom: 1px solid #444444;
