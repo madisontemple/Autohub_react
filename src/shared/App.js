@@ -20,9 +20,12 @@ import {
 } from "../pages";
 import { SearchResult, Hyundai, Kia, Benz, Bmw, Genesis } from "../pages";
 import { Floor, Contact } from "../pages";
+import { C4F } from "../pages";
 import { Shop1, Shop2, Shop3, Shop4 } from "../pages";
 
 function App() {
+
+  
   return (
     <Router>
       <Navbar />
@@ -52,6 +55,8 @@ function App() {
         <Route path="/AboutAutohub" component={AboutAutohub} />
         <Route path="/Floor" component={Floor} />
         <Route path="/Contact" component={Contact} />
+
+        <Route path="/C4F" component={C4F} />
 
       </Switch>
     </Router>

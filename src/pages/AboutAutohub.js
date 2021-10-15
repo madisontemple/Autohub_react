@@ -4,6 +4,7 @@ import Map from "../shared/Map";
 import { useHistory } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { BiBuildings } from "react-icons/bi";
+
 import "../index.css";
 import Home from "./Home";
 
@@ -56,48 +57,52 @@ function AboutAutohub() {
 
       <IntroPart>
         <h2>오토허브 소개</h2>
+        
         <AutohubImage src="/images/AutohubBuilding.png" />
 
-        <p>자동차 매매단지의 패러다임을 바꾼 오토허브입니다.</p>
+        <Comment>자동차 매매단지의 패러다임을 바꾼 오토허브입니다.</Comment>
 
-        <p>
+        <Comment>
           61,000 여평 규모의 오토허브는 2018년부터 운영된 최초의 대형
           매매단지로서
           <br />
           현재까지 허위매물 없이 안전하게 단지 운영을 하여 고객들에게 사랑을
           받아오고 있습니다.
-        </p>
+        </Comment>
 
-        <p>
+        <Comment>
           차량판매 시설뿐만 아니라 상품화 시설부터 차량등록 사무소까지
           <br />
           단지에 입점되어있어 상사 운영자와 고객 모두에게 최고의 서비스를
           제공하고 있습니다.
-        </p>
-        <p>
+        </Comment>
+        <Comment>
           또한 전문 식당, 카페, 편의점 등이 있어 단지 방문 고객은 편리한 단지
           이용 경험을 할 수 있으며,
           <br />
           이 밖에도 병원, 볼링장, 스크린 골프장 등 다양한 생활시설도 입점해 있어
           자동차 복합 문화 공간으로서 <br />
           완벽한 모습을 갖추고 있습니다.
-            </p>
+            </Comment>
       </IntroPart>
       <BuildArea>
+      
         <h2>세부 면적</h2>
-        <p>
+        <Comment>
           최대8,000대의 실내 전시가 가능하며, 최대1,300대의 고객 주차가 가능한
           대형 복합 단지입니다.
-        </p>
-        <BuildButton onclick="openForm()">
-          <BiBuildings />
-          <Span>건축 면적 정보</Span>
-        </BuildButton>
+        </Comment>
+        <details>
+        
+        <Summary style={{fontSize:"25px"}}>건축 면적 정보</Summary>
+          
+          {/* <Span>건축 면적 정보</Span> */}
+        
 
         <Table id="myForm">
+            <Th style={{position:"relative",right:"20px"}}>건축 면적 정보</Th>
           <Tr>
-            <Th>건축 면적 정보</Th>
-            <Th></Th>
+            
             <Th></Th>
             <Th></Th>
           </Tr>
@@ -121,7 +126,7 @@ function AboutAutohub() {
           </Tr>
           <Tr>
             <Td>층수</Td>
-            <Td>지라4층, 지하4층</Td>
+            <Td>지하4층, 지상4층</Td>
             <Td></Td>
             <Td></Td>
           </Tr>
@@ -138,7 +143,7 @@ function AboutAutohub() {
             <Td></Td>
           </Tr>
 
-          <Th>용도별 면적</Th>
+          <Th style={{position:"relative",right:"20px"}}>용도별 면적</Th>
 
           <Tr>
             <Th>구분</Th>
@@ -183,33 +188,41 @@ function AboutAutohub() {
             <Td></Td>
           </Tr>
         </Table>
+        </details>
       </BuildArea>
+      
       <IntroFacilities>
         <h2>시설 안내</h2>
-        <p>다양한 시설이 입점 되어 있는 자동차 복합 문화 공간</p>
+        <Comment>다양한 시설이 입점 되어 있는 자동차 복합 문화 공간</Comment>
         <Table1>
+        <div>
+        <BuildingImage src="/images/자동차관련시설1.png" />
+        <CarImage src="/images/CarIcon.png" />
+
+        </div>
           
             <tr>
-              <Td1>자동차 관련시설</Td1>
-              <Td1>상품화 관련 시설</Td1>
-              <Td1>근린 생활 시설</Td1>
+              <Th1>자동차 관련시설</Th1>
+
+              <Th1>상품화 관련 시설</Th1>
+              <Th1>근린 생활 시설</Th1>
             </tr>
             <tr>
-              <Td1>매매상사 및 차량 전시장 <br/>
+              <Th1>매매상사 및 차량 전시장 <br/>
               자동차 경매장 <br/>
               차량 용품 전문점<br/>
               금융사(캐피탈, 보험) <br/>
-              차량 등록 사무소</Td1>
-              <Td1>1급 정비소 <br/>
+              차량 등록 사무소</Th1>
+              <Th1>1급 정비소 <br/>
               성능 점검장 <br/>
               세차/광택<br/>
               포토존 <br/>
-              기타 정비 및 휠 복원</Td1>
-              <Td1>전문 식당가, 카페 <br/>
+              기타 정비 및 휠 복원</Th1>
+              <Th1>전문 식당가, 카페 <br/>
               병원(종합검진, 치과 등)<br/>
               약국, 편의점<br/>
               볼링장, 골프장, 헬스장 <br/>
-              키즈 카페</Td1>
+              키즈 카페</Th1>
             </tr>
            
 
@@ -222,8 +235,8 @@ function AboutAutohub() {
     
     
     <h2>단지 위치 안내</h2>
-    <p>최적의 교통 환경과 입지<br />
-    수원신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 남부 30분 이내에 도착 가능</p>
+    <Comment>최적의 교통 환경과 입지<br />
+    수원신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 남부 30분 이내에 도착 가능</Comment>
     </LocationPart>
     
 
@@ -253,10 +266,10 @@ function AboutAutohub() {
       <p style={{fontSize:"22px" ,fontWeight:"600"}}>8. 단지 내 다양한 편의시설</p>
       <p style={{fontSize:"22px",marginLeft:"30px"}}>종합검진센터(병원), 스크린 골프장, 볼링장, 키즈카페 등</p>
 
-      <p style={{fontSize:"22px" ,fontWeight:"700",paddingTop:"50px"}}>임대 문의</p>
-      <p style={{fontSize:"22px" ,fontWeight:"500"}}>(주)신동해홀딩스 사업관리팀</p>
-      <p style={{fontSize:"22px" ,fontWeight:"500"}}>Tel. 031-5182-5027</p>
-      <p style={{fontSize:"22px" ,fontWeight:"500"}}>Email:dnlee@autohub.co.kr</p>
+      <p style={{fontSize:"17px" ,fontWeight:"700",paddingTop:"50px"}}>임대 문의</p>
+      <p style={{fontSize:"17px" ,fontWeight:"500"}}>(주)신동해홀딩스 사업관리팀</p>
+      <p style={{fontSize:"17px" ,fontWeight:"500"}}>Tel. 031-5182-5027</p>
+      <p style={{fontSize:"17px" ,fontWeight:"500"}}>Email:dnlee@autohub.co.kr</p>
 
 
     </EightPoints>
@@ -311,10 +324,33 @@ const IntroPart = styled.div`
 const AutohubImage = styled.img`
   height: 350px;
 `;
-
+const Comment = styled.p`
+font-family: 'Noto Sans Korean';
+font-weight: 700;
+font-size: 17px;
+`;
 const BuildArea = styled.div`
   padding-top: 50px;
   margin-left: 85px;
+`;
+const Summary = styled.summary`
+  padding: 10px;
+  border: solid 2px black;
+
+  width: 170px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px #999; */
+  &:hover {
+    background-color: #e3dfdb;
+  }
+  &:active {
+    background-color: #e3dfdb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transition: width 2s;
+  }
 `;
 const BuildButton = styled.button`
   font-size: 20px;
@@ -396,13 +432,27 @@ const Table1 = styled.table`
   font-size: 20px;
   
 `;
-const Td1 =styled.th`
+const Th1 =styled.th`
   text-align: center;
   margin: auto;
   
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 40px;
+`;
+const BuildingImage = styled.img`
+    width: 80px;
+    position: absolute;
+    left: 150px;
+   
+    
+`;
+const CarImage = styled.img`
+    width: 80px;
+    position: absolute;
+    left: 150px;
+    
+    
 `;
 const LocationPart = styled.div`
 padding-top: 50px;

@@ -14,14 +14,12 @@ function Floor() {
   const JoinClick = () => history.push("./Join");
   const LoginClick = () => history.push("./Login");
 
-  const HyundaiClick = () => history.push("./Hyundai");
-  const KiaClick = () => history.push("./Kia");
-  const BenzClick = () => history.push("./Benz");
-  const BmwClick = () => history.push("./Bmw");
-  const GenesisClick = () => history.push("./Genesis");
+  
 
   const FloorClick = () => history.push("./Floor");
   const ContactClick = () => history.push("./Contact");
+
+  const C4FClick = () => history.push("./C4F");
 
   return (
     <div>
@@ -42,16 +40,16 @@ function Floor() {
       </AboutMenuPart>
 
       <FloorTable>
-        <h2 style={{marginLeft:"90px"}}>층별가이드</h2>
+        <h2 style={{ marginLeft: "90px" }}>층별가이드</h2>
         <HR></HR>
         <Comment>
           "아래의 각 층 <Comment1>클릭</Comment1>시 상세안내로 이동할 수
           있습니다."
         </Comment>
 
-        <div>
+        <ImagePart>
           <AutohubBuilding src="/images/Autohub_BuldingFloor.png" />
-        </div>
+        </ImagePart>
 
         {/* <Table>
   <Tr>
@@ -61,273 +59,194 @@ function Floor() {
   </Tr>
 
   </Table> */}
-        <InfoTable style={{ }}>
-          
-            
-            
-            <Table1 style={{width:"260px",marginRight:"100px" }}>
+        <InfoTable style={{}}>
+          <Table1 style={{ width: "260px", marginRight: "100px" }}>
+            <Tr1>
+              <Th1 style={{}}>C동</Th1>
+            </Tr1>
+            <Tr1 button type="button" onClick={C4FClick}>
+              <Td1>
+                <span style={{ marginRight: "57px" ,color:"#2E86C1" }}>4F</span>
+                자동차경매실
+              </Td1>
+            </Tr1>
+            <Tr1>
               <Tr1>
-                <Th1 style={{  }}>C동</Th1>
-              </Tr1>
-              <Tr1>
-                
-                <Th2>
-                <span style={{marginRight:"50px"}}>4F</span>
-                  <span style={{paddingRight:"80px"}}> 자동차 경매장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                {/* <Th2 style={{ width: "80px" }}>3F</Th2> */}
-                <Th2>
-                <span style={{marginRight:"65px", position:"relative",top:"10px" }}>3F</span>
-                  <span style={{paddingRight:"90px"}} >
-                    세차 / 광택 <br />
+                <Td1>
+                  <span
+                    style={{
+                      marginRight: "55px",
+                      position: "relative",
+                      top: "8px",color:"#2E86C1"
+                    }}
+                  >
+                    3F
                   </span>
-                    <span>타이어 /휠 복원</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                {/* <Th2 style={{ width: "80px" }}>2F</Th2> */}
-                <Th2>
-                <span style={{marginRight:"50px"}}>2F</span>
-                  <span style={{paddingRight:"80px"}}> 차량 정비</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                {/* <Th2 style={{ width: "80px" }}>1F</Th2> */}
-                <Th2>
-                <span>1F</span>
-                  <span>
-                    성능점검장
+                  <span style={{}}>
+                    세차 / 광택
                     <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    타이어 / 휠 복원
                   </span>
-                </Th2>
+                </Td1>
               </Tr1>
-              <Tr1>
-                {/* <Th2 style={{ width: "80px" }}>B1F</Th2> */}
-                <Th2>
-                <span>B1F</span>
-                  <span>
-                    자동차 용품 전문점
-                    <br />
-                  </span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                {/* <Th2 style={{ width: "80px" }}>B2F</Th2> */}
-                <Th2>
-                <span>B2F</span>
-                  <span>
-                    엔카 포도존
-                    <br />
-                  </span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                {/* <Th2 style={{ width: "80px" }}>B3F</Th2> */}
-                <Th2>
-                <span>B3F</span>
-                  <span>
-                    차량 전시장
-                    <br />
-                  </span>
-                </Th2>
-              </Tr1>
-            </Table1>
-          
-            <Table1 style={{ width:"250px",marginRight:"100px"}}>
-              <Tr1>
-                <Th1 style={{  }}>B동</Th1>
-              </Tr1>
-              <Tr1>
-                
-                <Th2>
-                <span style={{marginRight:"50px"}}>4F</span>
-                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2>
-                <span style={{ marginRight:"50px"}}>3F</span>
-                  <span style={{paddingRight:"90px"}}>고객 주차장 </span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2>
-                <span style={{marginRight:"50px"}}>2F</span>
-                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2>
-                <span style={{marginRight:"50px"}}>1F</span>
-                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                
-                <Th2>
-                <span style={{marginRight:"50px"}}>B1F</span>
-                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-               
-                <Th2>
-                <span style={{marginRight:"50px"}}>B2F</span>
-                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
-                  
-                </Th2>
-              </Tr1>
-              <Tr1>
-                
-                <Th2>
-                <span style={{marginRight:"50px"}}>B3F</span>
-                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
-                </Th2>
-              </Tr1>
-            </Table1>
-        
-         
-            
-            
-            <Table1 style={{ width:"530px",marginRight:"60px"}}>
-              <Tr1>
-                <Th1 style={{  }}>A동</Th1>
-              </Tr1>
-              <Tr1>
-                
-                <Th2>
-                <span style={{marginRight:"50px"}}>4F</span>
-                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2>
-                <span style={{ marginRight:"50px"}}>3F</span>
-                  <span style={{paddingRight:"90px"}}>고객 주차장 </span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2>
-                <span style={{marginRight:"50px"}}>2F</span>
-                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                <Th2>
-                <span style={{marginRight:"50px"}}>1F</span>
-                  <span style={{paddingRight:"80px"}}> 고객 주차장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-                
-                <Th2>
-                <span style={{marginRight:"50px"}}>B1F</span>
-                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
-                </Th2>
-              </Tr1>
-              <Tr1>
-               
-                <Th2>
-                <span style={{marginRight:"50px"}}>B2F</span>
-                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
-                  
-                </Th2>
-              </Tr1>
-              <Tr1>
-                
-                <Th2>
-                <span style={{marginRight:"50px"}}>B3F</span>
-                  <span style={{paddingRight:"80px"}}> 차량 전시장</span>
-                </Th2>
-              </Tr1>
-            </Table1>
-          
+            </Tr1>
+            <Tr1>
+              {/* <Th2 style={{ width: "80px" }}>2F</Th2> */}
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1" }}>2F</span>
+                차량 정비
+              </Td1>
+            </Tr1>
+            <Tr1>
+              {/* <Th2 style={{ width: "80px" }}>1F</Th2> */}
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>1F</span>
+                선능점검장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              {/* <Th2 style={{ width: "80px" }}>B1F</Th2> */}
+              <Td1>
+                <span style={{ marginRight: "55px",color:"#2E86C1" }}>B1F</span> 자동차 용품
+                전문점
+              </Td1>
+            </Tr1>
+            <Tr1>
+              {/* <Th2 style={{ width: "80px" }}>B2F</Th2> */}
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B2F</span>엔카 포토존
+              </Td1>
+            </Tr1>
+            <Tr1>
+              {/* <Th2 style={{ width: "80px" }}>B3F</Th2> */}
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B3F</span>
+                차량 전시장
+              </Td1>
+            </Tr1>
+          </Table1>
+
+          <Table1
+            style={{ width: "250px", marginRight: "100px", marginTop: "30px" }}
+          >
+            <Tr1>
+              <Th1 style={{}}>B동</Th1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>4F</span>
+                고객 주차장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>3F</span>
+                고객 주차장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px",color:"#2E86C1" }}>2F</span>
+                고객 주차장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px",color:"#2E86C1" }}>1F</span>
+                고객 주차장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B1F</span>
+                차량 전시장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px",color:"#2E86C1" }}>B2F</span>
+                차량 전시장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B3F</span>
+                차량 전시장
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B4F</span>
+                차량 전시장
+              </Td1>
+            </Tr1>
+          </Table1>
+
+          <Table1 style={{ width: "530px", marginRight: "60px" }}>
+            <Tr1>
+              <Th1 style={{}}>A동</Th1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#f11843"}}>4F</span>
+                <span style={{marginLeft:"90px"}}>볼링장, 골프장, 키즈카페, 헬스장</span>
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#f11843"}}>3F</span>
+                <span style={{marginLeft:"90px"}}>매매상사, 식당, 카페, 편의점, 사무실</span>
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,position:"relative", top:"10px",color:"#f11843"}}>2F</span>
+                <span style={{ marginLeft: "60px" }}>
+                  {" "}
+                  매매상사 고객지원센터 차량등록사무소 카페{" "}
+                </span>{" "}
+                <br />{" "}
+                <span style={{ marginLeft: "160px" }}>
+                  편의점 병원 약국 중앙정원 사무실
+                </span>
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#f11843"}}>1F</span>
+                <span style={{marginLeft:"40px"}}>매매상사 특별전시장 카페 금융사 용인시 지부 사무실</span>
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#f11843"}}>B1F</span>
+                <span style={{marginLeft:"140px"}}>차량 전시장</span>
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#f11843"}}>B2F</span>
+                <span style={{marginLeft:"140px"}}>차량 전시장</span>
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#f11843"}}>B3F</span>
+                <span style={{marginLeft:"140px"}}>차량 전시장</span>
+              </Td1>
+            </Tr1>
+            <Tr1>
+              <Td1>
+                <span style={{ marginRight: "55px" ,color:"#f11843"}}>B4F</span>
+                <span style={{marginLeft:"110px"}}>매매상사 차량 전시장</span>
+              </Td1>
+            </Tr1>
+          </Table1>
         </InfoTable>
       </FloorTable>
 
-      {/* <InfoTable>
-<Table1>
-  <Tr1>
-    <Th1 style={{width:"80px"}}>4F</Th1>
-    <Th1> <label for="label4F">볼링장,골프장,<br/><br/> 키즈카페,헬스장</label></Th1>
-    <Input type="checkbox" id="label4F" />
-    <div>
-
-    </div>
-    <Th1>고객주차장</Th1>
-    <Th1>자동차 경매실</Th1>
-  </Tr1>
-
-  </Table1>
-
-  <Table1>
-  <Tr1>
-    <Th1 style={{width:"80px"}}>3F</Th1>
-    <Th1>매매상사,식당,카페<br/><br/> 편의점,사무실</Th1>
-    <Th1>고객주차장</Th1>
-    <Th1>세차/광택<br/><br/>타이어/휠 복원</Th1>
-  </Tr1>
-
-  </Table1>
-  <Table1>
-  <Tr1>
-    <Th1 style={{width:"80px"}}>2F</Th1>
-    <Th1 style={{height:"150px"}}>매매상사,고객지원센터<br/><br/>차량등록사무소, 카페, 편의점<br/><br/>
-    병원,약국,중앙정원,사무실</Th1>
-    <Th1>고객주차장</Th1>
-    <Th1>자동차 경매실</Th1>
-  </Tr1>
-
-  </Table1>
-  <Table1>
-  <Tr1>
-    <Th1 style={{width:"80px"}}>1F</Th1>
-    <Th1>매매상사,특별전시장,카페<br/><br/>금융사,용인시 지부,사무실</Th1>
-    <Th1>고객주차장</Th1>
-    <Th1>성능점검장</Th1>
-  </Tr1>
-
-  </Table1>
-  <Table1>
-  <Tr1>
-    <Th1 style={{width:"80px"}}>B1F</Th1>
-    <Th1>차량 전시장</Th1>
-    <Th1>차량 전시장</Th1>
-    <Th1>자동차 용품 전문점</Th1>
-  </Tr1>
-
-  </Table1>
-  <Table1>
-  <Tr1>
-  <Th1 style={{width:"80px"}}>B2F</Th1>
-    <Th1>차량 전시장</Th1>
-    <Th1>차량 전시장</Th1>
-    <Th1>엔카 포토존</Th1>
-  </Tr1>
-
-  </Table1>
-  <Table1>
-  <Tr1>
-    <Th1 style={{width:"80px"}}>B3F</Th1>
-    <Th1>차량 전시장</Th1>
-    <Th1>차량 전시장</Th1>
-    <Th1>차량 전시장</Th1>
-  </Tr1>
-
-  </Table1>
-  <Table1>
-  <Tr1>
-    <Th1 style={{width:"80px"}}>B4F</Th1>
-    <Th1>매매상사, 차량 전시장</Th1>
-    <Th1>차량 전시장</Th1>
-    <Th1></Th1>
-  </Tr1>
-
-  </Table1>
-  <HiddenImage src="/images/Autohub.Main1.png"/>
-</InfoTable> */}
+      
     </div>
   );
 }
@@ -349,7 +268,6 @@ const AboutList = styled.li`
   display: block;
   position: relative;
   padding: 1em 1;
-  
 
   &::after {
     content: "";
@@ -371,23 +289,21 @@ const AboutList = styled.li`
 `;
 const FloorTable = styled.div`
   padding-top: 100px;
-  
 `;
 const HR = styled.hr`
   width: 90%;
   justify-content: center;
   display: flex;
- 
+
   align-items: center;
-  
 `;
 const Comment = styled.span`
   font-size: 20px;
   font-weight: 700;
   font-family: inherit;
   display: flex;
- margin-left: 90px;
- justify-content: center;
+  margin-left: 90px;
+  justify-content: center;
   align-items: center;
   margin-top: 50px;
 `;
@@ -396,57 +312,55 @@ const Comment1 = styled.span`
   color: #f11843;
 `;
 
+const ImagePart = styled.div`
+  max-width: 1300px;
+  min-width: 340px;
+  justify-content: center;
+  align-items: center;
+`;
 const AutohubBuilding = styled.img`
-  width: 80%;
+  width: 100%;
   height: 200px;
   margin-top: 50px;
   margin-left: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const InfoTable = styled.div`
-  
   margin-left: 30px;
-  
+
   /* flex-wrap: initial; */
   display: flex;
   flex-grow: 0;
   justify-content: center;
   align-items: center;
- 
-
-  
 `;
-const CTable = styled.div`
-
-  
-`;
-const BTable = styled.div`
-
-`;
-const ATable = styled.div`
-
-`;
+const CTable = styled.div``;
+const BTable = styled.div``;
+const ATable = styled.div``;
 
 const Table1 = styled.table`
-  /* margin-left: auto;
-  margin-right: auto; */
   border-collapse: separate;
   border-spacing: 0 0 15px 15px;
-  
   table-layout: fixed;
-  
 `;
-const Tr1 = styled.tr`
-
-`;
+const Tr1 = styled.tr``;
 const Th1 = styled.th`
   border-top: 3px solid #444444;
   border-bottom: 1px solid #444444;
   height: 30px;
+  cursor: pointer;
+  padding: 15px;
+  &:hover {
+    background-color: #e8e8e8;
+  }
+`;
+const Td1 = styled.td`
+  border-bottom: 1px solid #444444;
 
+  font-weight: 700;
+  height: 30px;
+  width: 400px;
   cursor: pointer;
   padding: 10px;
   &:hover {
