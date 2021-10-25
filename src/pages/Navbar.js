@@ -26,8 +26,26 @@ function Navbar() {
           alt="오토허브 로고"
            button type="button" onClick={HomeClick}
         />
+        <nav style={{marginTop:"13px"}}>
+          <LeftsideMenuList button type="button" onClick={BuyClick}>살때</LeftsideMenuList>
+          <a
+              href="http://www.ajsellcar.co.kr/alliance/autohub.do"
+              target="_blank"
+              style={{ textDecoration: "none" }}
+            >
+          <LeftsideMenuList button type="button" onClick={SellClick}>팔때</LeftsideMenuList>
+          </a>
+          <LeftsideMenuList button type="button" onClick={ManagedClick}>직영차</LeftsideMenuList>
+          <LeftsideMenuList button type="button" onClick={AboutAutohub}>단지안내</LeftsideMenuList>
+          <LeftsideMenuList button type="button" onClick={CCenterClick}>고객센터</LeftsideMenuList>
+        </nav>
+        <nav style={{marginTop:"13px",marginLeft:"500px"}}>
+        <RightsideMenuList  button type="button" onClick={LoginClick}>로그인</RightsideMenuList>
+        <RightsideMenuList button type="button" onClick={JoinClick}>회원가입</RightsideMenuList>
 
-        <div style={{ display: "flex", width: "100%" }}>
+        </nav>
+
+        {/* <div style={{ display: "flex", width: "100%" }}>
           <HeaderList>
             <LeftsideMenuList button type="button" onClick={BuyClick}>
               살때
@@ -60,7 +78,7 @@ function Navbar() {
               회원가입
             </RightsideMenuList>
           </Rightside>
-        </div>
+        </div> */}
       </Menu>
       {/* <AboutMenuPart>
         <AboutListUl>
@@ -79,13 +97,20 @@ function Navbar() {
 }
 
 const Menu = styled.div`
+  position: fixed;
+  z-index:500;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  padding-top: 20px;
+  /* padding-top: 20px;
   margin-top: -40px;
-  padding-right: 0px;
+  padding-right: 0px; */
   background: #f11843;
-  height: 120px;
+  height: 50px;
   width: 100%;
 `;
 
@@ -94,7 +119,7 @@ const AutohubLogo = styled.img`
   height: 40px;
   margin-left: 80px;
   cursor: pointer;
-  margin-top: 10px;
+  
 `;
 
 const HeaderList = styled.div`
@@ -102,14 +127,14 @@ const HeaderList = styled.div`
   width: 50%;
 `;
 
-const LeftsideMenuList = styled.div`
-  list-style: none;
-  margin-left: 30px;
-  margin-top: 10px;
+const LeftsideMenuList = styled.span`
+  margin-left: 40px;
   color: white;
   font-weight: 900;
   font-size: 15px;
   cursor: pointer;
+  
+  
 `;
 
 const Rightside = styled.div`
@@ -117,16 +142,19 @@ const Rightside = styled.div`
   width: 50%;
   justify-content: flex-end;
   padding-right: 100px;
-  margin-top: 10px;
+  
 `;
 
-const RightsideMenuList = styled.div`
+const RightsideMenuList = styled.span`
   color: white;
   font-weight: 900;
   font-size: 15px;
   cursor: pointer;
-  margin-left: -10px;
-  padding-right: 60px;
+  
+margin-left: 55px;
+  
+  
+  
 `;
 const AboutMenuPart = styled.div`
   background-color: #f11843;

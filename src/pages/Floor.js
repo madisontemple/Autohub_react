@@ -20,6 +20,7 @@ function Floor() {
   const ContactClick = () => history.push("./Contact");
 
   const C4FClick = () => history.push("./C4F");
+  const C3FClick = () => history.push("./C3F");
 
   return (
     <div>
@@ -38,12 +39,18 @@ function Floor() {
           </AboutList>
         </AboutListUl>
       </AboutMenuPart>
+      <div style={{position: "relative;"}}>
+        <AHBuilding src="/images/오토허브건물2.jpeg" />
+        
+      </div>
+      <AboutFloor>
+      <FloorInfo> - Floor Info -</FloorInfo>
+      </AboutFloor>
 
       <FloorTable>
-        <h2 style={{ marginLeft: "90px" }}>층별가이드</h2>
         <HR></HR>
         <Comment>
-          "아래의 각 층 <Comment1>클릭</Comment1>시 상세안내로 이동할 수
+          "아래의 각 층 <Comment1> 클릭 </Comment1>시 상세안내로 이동할 수
           있습니다."
         </Comment>
 
@@ -71,11 +78,11 @@ function Floor() {
               </Td1>
             </Tr1>
             <Tr1>
-              <Tr1>
+              <Tr1 button type="button" onClick={C3FClick}>
                 <Td1>
                   <span
                     style={{
-                      marginRight: "55px",
+                      marginRight: "60px",
                       position: "relative",
                       top: "8px",color:"#2E86C1"
                     }}
@@ -85,43 +92,43 @@ function Floor() {
                   <span style={{}}>
                     세차 / 광택
                     <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     타이어 / 휠 복원
                   </span>
                 </Td1>
               </Tr1>
             </Tr1>
             <Tr1>
-              {/* <Th2 style={{ width: "80px" }}>2F</Th2> */}
+              
               <Td1>
-                <span style={{ marginRight: "55px" ,color:"#2E86C1" }}>2F</span>
+                <span style={{ marginRight: "65px" ,color:"#2E86C1" }}>2F</span>
                 차량 정비
               </Td1>
             </Tr1>
             <Tr1>
-              {/* <Th2 style={{ width: "80px" }}>1F</Th2> */}
+              
               <Td1>
-                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>1F</span>
+                <span style={{ marginRight: "65px" ,color:"#2E86C1"}}>1F</span>
                 선능점검장
               </Td1>
             </Tr1>
             <Tr1>
-              {/* <Th2 style={{ width: "80px" }}>B1F</Th2> */}
+             
               <Td1>
-                <span style={{ marginRight: "55px",color:"#2E86C1" }}>B1F</span> 자동차 용품
+                <span style={{ marginRight: "30px",color:"#2E86C1" }}>B1F</span> 자동차 용품
                 전문점
               </Td1>
             </Tr1>
             <Tr1>
-              {/* <Th2 style={{ width: "80px" }}>B2F</Th2> */}
+              
               <Td1>
-                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B2F</span>엔카 포토존
+                <span style={{ marginRight: "50px" ,color:"#2E86C1"}}>B2F</span>엔카 포토존
               </Td1>
             </Tr1>
             <Tr1>
-              {/* <Th2 style={{ width: "80px" }}>B3F</Th2> */}
+             
               <Td1>
-                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B3F</span>
+                <span style={{ marginRight: "50px" ,color:"#2E86C1"}}>B3F</span>
                 차량 전시장
               </Td1>
             </Tr1>
@@ -153,31 +160,31 @@ function Floor() {
             </Tr1>
             <Tr1>
               <Td1>
-                <span style={{ marginRight: "55px",color:"#2E86C1" }}>1F</span>
+                <span style={{ marginRight: "57px",color:"#2E86C1" }}>1F</span>
                 고객 주차장
               </Td1>
             </Tr1>
             <Tr1>
               <Td1>
-                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B1F</span>
+                <span style={{ marginRight: "47px" ,color:"#2E86C1"}}>B1F</span>
                 차량 전시장
               </Td1>
             </Tr1>
             <Tr1>
               <Td1>
-                <span style={{ marginRight: "55px",color:"#2E86C1" }}>B2F</span>
+                <span style={{ marginRight: "47px",color:"#2E86C1" }}>B2F</span>
                 차량 전시장
               </Td1>
             </Tr1>
             <Tr1>
               <Td1>
-                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B3F</span>
+                <span style={{ marginRight: "47px" ,color:"#2E86C1"}}>B3F</span>
                 차량 전시장
               </Td1>
             </Tr1>
             <Tr1>
               <Td1>
-                <span style={{ marginRight: "55px" ,color:"#2E86C1"}}>B4F</span>
+                <span style={{ marginRight: "47px" ,color:"#2E86C1"}}>B4F</span>
                 차량 전시장
               </Td1>
             </Tr1>
@@ -251,7 +258,11 @@ function Floor() {
   );
 }
 
-const AboutMenuPart = styled.div``;
+const AboutMenuPart = styled.div`
+margin-top: 100px;
+
+`;
+
 const AboutListUl = styled.ul`
   list-style: none;
   padding-left: 145px;
@@ -264,7 +275,7 @@ const AboutList = styled.li`
   font-weight: 900;
   font-size: 15px;
   cursor: pointer;
-
+z-index: 300;
   display: block;
   position: relative;
   padding: 1em 1;
@@ -287,8 +298,70 @@ const AboutList = styled.li`
     transform: translate3d(0, 0.3em, 0);
   }
 `;
+const AHBuilding = styled.img`
+width: 100%;
+height: 400px;
+margin-top: 140px;
+
+
+-webkit-animation: kenburns-bottom 5s ease-out both;
+	        animation: kenburns-bottom 5s ease-out both;
+
+          @-webkit-keyframes kenburns-bottom {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 84%;
+            transform-origin: 50% 84%;
+  }
+ 100% {
+    -webkit-transform: scale(1.25) translateY(15px);
+            transform: scale(1.25) translateY(15px);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+@keyframes kenburns-bottom {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 84%;
+            transform-origin: 50% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(15px);
+            transform: scale(1.25) translateY(15px);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}         
+  
+`;
+const AboutFloor = styled.div`
+ background-color:#f11843 ;
+height: 70px;
+ width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  z-index: 500;
+  margin-top: 50px;
+  margin-left: 38%;
+  display: flex;
+  justify-content: center;
+
+  
+ 
+
+
+`;
+const FloorInfo = styled.h2`
+color: white;
+letter-spacing: .7rem;
+font-family: 'Merriweather Sans', sans-serif;
+`;
+
 const FloorTable = styled.div`
-  padding-top: 100px;
+  padding-top: 40px;
 `;
 const HR = styled.hr`
   width: 90%;
@@ -328,7 +401,8 @@ const AutohubBuilding = styled.img`
 
 const InfoTable = styled.div`
   margin-left: 30px;
-
+  max-width: 1500px;
+  min-width: 340px;
   /* flex-wrap: initial; */
   display: flex;
   flex-grow: 0;
@@ -343,6 +417,9 @@ const Table1 = styled.table`
   border-collapse: separate;
   border-spacing: 0 0 15px 15px;
   table-layout: fixed;
+  width: auto;
+  
+
 `;
 const Tr1 = styled.tr``;
 const Th1 = styled.th`
@@ -396,3 +473,4 @@ const HiddenImage = styled.img`
   transition: 0.8s;
 `;
 export default Floor;
+

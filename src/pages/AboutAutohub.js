@@ -1,25 +1,17 @@
-import React , { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
+
 import styled from "styled-components";
 import Map from "../shared/Map";
 import { useHistory } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { BiBuildings } from "react-icons/bi";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 import "../index.css";
 import Home from "./Home";
 
-
-
-
-
-
 function AboutAutohub() {
-  
-  
-  
-
-
-  
   const openForm = () =>
     (document.getElementById("myForm").style.display = "block");
 
@@ -43,21 +35,31 @@ function AboutAutohub() {
   const ContactClick = () => history.push("./Contact");
   
 
+  useEffect(() => {
+      Aos.init({ duration: 2000 });
+  }, [])
+
   return (
-  <div>
-<AboutMenuPart>
+    <div style={{}}>
+      <AboutMenuPart>
         <AboutListUl>
-          <AboutList button type="button" onClick={AboutClick}>단지소개</AboutList>
-          <AboutList button type="button" onClick={FloorClick}>층별안내</AboutList>
+          <AboutList button type="button" onClick={AboutClick}>
+            단지소개
+          </AboutList>
+          <AboutList button type="button" onClick={FloorClick}>
+            층별안내
+          </AboutList>
           <AboutList>단지사진</AboutList>
           <AboutList>특별 프로모션</AboutList>
-          <AboutList button type="button" onClick={ContactClick}>오시는길</AboutList>
+          <AboutList button type="button" onClick={ContactClick}>
+            오시는길
+          </AboutList>
         </AboutListUl>
       </AboutMenuPart>
 
-      <IntroPart>
-        <h2>오토허브 소개</h2>
-        
+      <IntroPart data-aos="fade-up">
+        <h2>오토허브 단지 소개</h2>
+
         <AutohubImage src="/images/AutohubBuilding.png" />
 
         <Comment>자동차 매매단지의 패러다임을 바꾼 오토허브입니다.</Comment>
@@ -83,212 +85,346 @@ function AboutAutohub() {
           이 밖에도 병원, 볼링장, 스크린 골프장 등 다양한 생활시설도 입점해 있어
           자동차 복합 문화 공간으로서 <br />
           완벽한 모습을 갖추고 있습니다.
-            </Comment>
+        </Comment>
       </IntroPart>
-      <BuildArea>
-      
-        <h2>세부 면적</h2>
+
+
+      <BuildArea data-aos="fade-up">
+        <h2 >세부 면적</h2>
         <Comment>
           최대8,000대의 실내 전시가 가능하며, 최대1,300대의 고객 주차가 가능한
           대형 복합 단지입니다.
         </Comment>
-        <details>
         
-        <Summary style={{fontSize:"25px"}}>건축 면적 정보</Summary>
-          
+          <Summary style={{ fontSize: "25px" }}>건축 면적 정보</Summary>
+
           {/* <Span>건축 면적 정보</Span> */}
+
+          <Table id="myForm" data-aos="fade-down">
+            <Th style={{ position: "relative", right: "20px" }}>
+              건축 면적 정보
+            </Th>
+            <Tr>
+              <Th></Th>
+              <Th></Th>
+            </Tr>
+            <Tr>
+              <Td>토지면적</Td>
+              <Td>88,716m² </Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+            <Tr>
+              <Td>건축연면적</Td>
+              <Td>175,676,72m² </Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+            <Tr>
+              <Td>용도</Td>
+              <Td>자동차 관련 시설 및 부대시설</Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+            <Tr>
+              <Td>층수</Td>
+              <Td>지하4층, 지상4층</Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+            <Tr>
+              <Td>건폐율</Td>
+              <Td>16.81%</Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+            <Tr>
+              <Td>용적률</Td>
+              <Td>55.15%</Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+
+            <Th style={{ position: "relative", right: "20px" }}>용도별 면적</Th>
+
+            <Tr>
+              <Th>구분</Th>
+              <Th>면적</Th>
+              <Th>구성비</Th>
+              <Th>구분</Th>
+            </Tr>
+            <Tr>
+              <Td>전시장</Td>
+              <Td>139,520m²</Td>
+              <Td>(42,205평)</Td>
+              <Td>79%</Td>
+            </Tr>
+            <Tr>
+              <Td>근린생활</Td>
+              <Td>20,631m²</Td>
+              <Td>(6,241평)</Td>
+              <Td>12%</Td>
+            </Tr>
+            <Tr>
+              <Td>정비시설</Td>
+              <Td>15,526m²</Td>
+              <Td>(4,697평)</Td>
+              <Td>9%</Td>
+            </Tr>
+            <Tr>
+              <Td>합계</Td>
+              <Td>175,677m²</Td>
+              <Td>(53,142평)</Td>
+              <Td>100%</Td>
+            </Tr>
+            <Tr>
+              <Td>구분</Td>
+              <Td>면적</Td>
+              <Td>구성비</Td>
+              <Td>구분</Td>
+            </Tr>
+            <Tr>
+              <Td>* 별도. 고객 주차장:27,500m²(8,319평) 1,270대</Td>
+              <Td></Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+          </Table>
         
-
-        <Table id="myForm">
-            <Th style={{position:"relative",right:"20px"}}>건축 면적 정보</Th>
-          <Tr>
-            
-            <Th></Th>
-            <Th></Th>
-          </Tr>
-          <Tr>
-            <Td>토지면적</Td>
-            <Td>88,716m² </Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td>건축연면적</Td>
-            <Td>175,676,72m² </Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td>용도</Td>
-            <Td>자동차 관련 시설 및 부대시설</Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td>층수</Td>
-            <Td>지하4층, 지상4층</Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td>건폐율</Td>
-            <Td>16.81%</Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td>용적률</Td>
-            <Td>55.15%</Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-
-          <Th style={{position:"relative",right:"20px"}}>용도별 면적</Th>
-
-          <Tr>
-            <Th>구분</Th>
-            <Th>면적</Th>
-            <Th>구성비</Th>
-            <Th>구분</Th>
-          </Tr>
-          <Tr>
-            <Td>전시장</Td>
-            <Td>139,520m²</Td>
-            <Td>(42,205평)</Td>
-            <Td>79%</Td>
-          </Tr>
-          <Tr>
-            <Td>근린생활</Td>
-            <Td>20,631m²</Td>
-            <Td>(6,241평)</Td>
-            <Td>12%</Td>
-          </Tr>
-          <Tr>
-            <Td>정비시설</Td>
-            <Td>15,526m²</Td>
-            <Td>(4,697평)</Td>
-            <Td>9%</Td>
-          </Tr>
-          <Tr>
-            <Td>합계</Td>
-            <Td>175,677m²</Td>
-            <Td>(53,142평)</Td>
-            <Td>100%</Td>
-          </Tr>
-          <Tr>
-            <Td>구분</Td>
-            <Td>면적</Td>
-            <Td>구성비</Td>
-            <Td>구분</Td>
-          </Tr>
-          <Tr>
-            <Td>* 별도. 고객 주차장:27,500m²(8,319평) 1,270대</Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-        </Table>
-        </details>
       </BuildArea>
-      
-      <IntroFacilities>
+
+      <IntroFacilities data-aos="fade-up">
         <h2>시설 안내</h2>
         <Comment>다양한 시설이 입점 되어 있는 자동차 복합 문화 공간</Comment>
         <Table1>
-        <div>
-        <BuildingImage src="/images/자동차관련시설1.png" />
-        <CarImage src="/images/CarIcon.png" />
+          <tr>
+            <Th1>
+              <BuildingImage src="/images/자동차관련시설1.png" />
+              <CarImage src="/images/CarIcon.png" />
+              <br />
+              <br />
+              자동차 관련시설
+            </Th1>
 
-        </div>
-          
-            <tr>
-              <Th1>자동차 관련시설</Th1>
+            <Th1>
+              <CarMaint1 src="/images/차량정비1.png" />
+              <CarMaint2 src="/images/차량정비2.png" />
+              <br />
+              <br />
+              상품화 관련 시설
+            </Th1>
 
-              <Th1>상품화 관련 시설</Th1>
-              <Th1>근린 생활 시설</Th1>
-            </tr>
-            <tr>
-              <Th1>매매상사 및 차량 전시장 <br/>
-              자동차 경매장 <br/>
-              차량 용품 전문점<br/>
-              금융사(캐피탈, 보험) <br/>
-              차량 등록 사무소</Th1>
-              <Th1>1급 정비소 <br/>
-              성능 점검장 <br/>
-              세차/광택<br/>
-              포토존 <br/>
-              기타 정비 및 휠 복원</Th1>
-              <Th1>전문 식당가, 카페 <br/>
-              병원(종합검진, 치과 등)<br/>
-              약국, 편의점<br/>
-              볼링장, 골프장, 헬스장 <br/>
-              키즈 카페</Th1>
-            </tr>
-           
-
-          
-          
+            <Th1>
+              <Food1 src="/images/근린생활1.png" />
+              <Food2 src="/images/근린생활2.png" />
+              <br />
+              <br />
+              근린 생활 시설
+            </Th1>
+          </tr>
+          <tr>
+            <Th1>
+              매매상사 및 차량 전시장 <br />
+              자동차 경매장 <br />
+              차량 용품 전문점
+              <br />
+              금융사(캐피탈, 보험) <br />
+              차량 등록 사무소
+            </Th1>
+            <Th1>
+              1급 정비소 <br />
+              성능 점검장 <br />
+              세차/광택
+              <br />
+              포토존 <br />
+              기타 정비 및 휠 복원
+            </Th1>
+            <Th1>
+              전문 식당가, 카페 <br />
+              병원(종합검진, 치과 등)
+              <br />
+              약국, 편의점
+              <br />
+              볼링장, 골프장, 헬스장 <br />
+              키즈 카페
+            </Th1>
+          </tr>
         </Table1>
-
       </IntroFacilities>
-    <LocationPart>
-    
-    
-    <h2>단지 위치 안내</h2>
-    <Comment>최적의 교통 환경과 입지<br />
-    수원신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 남부 30분 이내에 도착 가능</Comment>
-    </LocationPart>
-    
+      <LocationPart>
+        <h2>단지 위치 안내</h2>
+        <Comment>
+          최적의 교통 환경과 입지
+          <br />
+          수원신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 남부 30분 이내에
+          도착 가능
+        </Comment>
+      </LocationPart>
 
-    <EightPoints>
-      <h2>오토허브 입점 포인트 8가지</h2>
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>1. 매입 자금 지원 시스템</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>최대 10억원의 저금리 금융 지원</p>
+      <EightPoints>
+        <h2 data-aos="fade-up">오토허브 입점 포인트 8가지</h2>
+        <br />
+        <br />
 
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>2. 경매/공매 통한 차량 매입</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>입주업체(오토헨즈 공.경매장, AJ셀카 경매장) 제휴 혜택</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            1. 매입 자금 지원 시스템
+            <br />
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              최대 10억원의 저금리 금융 지원
+            </p>
+          </p>
+          <img
+            src="/images/매입자금지원시스템.png"
+            style={{ width: "100px", marginLeft: "280px" }}
+          />
+        </div>
 
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>3. 엔카닷컴 제휴 단지</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>입점 상사의 엔카 촬영 제휴 할인</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            2. 경매/공매 통한 차량 매입
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              입주업체(오토헨즈 공.경매장, AJ셀카 경매장) 제휴 혜택
+            </p>
+          </p>
+          <img
+            src="/images/경매:공매통한차량매입.png"
+            style={{ width: "100px", marginLeft: "150px" }}
+          />
+        </div>
 
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>4. 서울 강남권 30분 이내 도착 가능</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>수원IC(경부/영동),수원신갈IC(경부/용서)3분 거리 위치</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            3. 엔카닷컴 제휴 단지
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              입주업체(오토헨즈 공.경매장, AJ셀카 경매장) 제휴 혜택
+            </p>
+          </p>
+          <img
+            src="/images/엔카닷컴 제휴단지.png"
+            style={{ width: "100px", marginLeft: "90px" }}
+          />
+        </div>
 
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>5. 매입에서 등록까지 원스톱</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>단지 내 차량등록사업 출장소 운영</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            4. 서울 강남권 30분 이내 도착 가능
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              수원IC(경부/영동),수원신갈IC(경부/용서)3분 거리 위치
+            </p>
+          </p>
+          <img
+            src="/images/강남권30분이내도착.png"
+            style={{ width: "100px", marginLeft: "150px" }}
+          />
+        </div>
 
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>6. 최대 8,000여대 차량 전시장</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>쾌적한 8,000여대 실내 전시장</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            5. 매입에서 등록까지 원스톱
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              단지 내 차량등록사업 출장소 운영
+            </p>
+          </p>
+          <img
+            src="/images/매입에서 등록까지원스톱1.png"
+            style={{ width: "100px", marginLeft: "270px" }}
+          />
+          <img
+            src="/images/매입에서등록까지원스톱2.png"
+            style={{ width: "100px" }}
+          />
+        </div>
 
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>7. 최대 1,300여대 고객 주차장</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>회원사와 방문고객에게 모두 편리한 고객 주차장</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            6. 최대 8,000여대 차량 전시장
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              쾌적한 8,000여대 실내 전시장
+            </p>
+          </p>
+          <img
+            src="/images/8000여대차량전시장.png"
+            style={{
+              width: "100px",
+              marginLeft: "300px",
+              position: "relative",
+              bottom: "20px",
+            }}
+          />
+        </div>
 
-      <p style={{fontSize:"22px" ,fontWeight:"600"}}>8. 단지 내 다양한 편의시설</p>
-      <p style={{fontSize:"22px",marginLeft:"30px"}}>종합검진센터(병원), 스크린 골프장, 볼링장, 키즈카페 등</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            7. 최대 1,300여대 고객 주차장
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              회원사와 방문고객에게 모두 편리한 고객 주차장
+            </p>
+          </p>
+          <img
+            src="/images/1300여대고객주차장.png"
+            style={{
+              width: "100px",
+              marginLeft: "250px",
+              position: "relative",
+              bottom: "20px",
+            }}
+          />
+        </div>
 
-      <p style={{fontSize:"17px" ,fontWeight:"700",paddingTop:"50px"}}>임대 문의</p>
-      <p style={{fontSize:"17px" ,fontWeight:"500"}}>(주)신동해홀딩스 사업관리팀</p>
-      <p style={{fontSize:"17px" ,fontWeight:"500"}}>Tel. 031-5182-5027</p>
-      <p style={{fontSize:"17px" ,fontWeight:"500"}}>Email:dnlee@autohub.co.kr</p>
+        <div style={{ display: "flex" }} data-aos="fade-up">
+          <p style={{ fontSize: "22px", fontWeight: "600" }}>
+            8. 단지 내 다양한 편의시설
+            <p style={{ fontWeight: "400", marginLeft: "30px" }}>
+              종합검진센터(병원), 스크린 골프장, 볼링장, 키즈카페 등
+            </p>
+          </p>
+          <img
+            src="/images/단지내편의시설.png"
+            style={{
+              width: "100px",
+              marginLeft: "120px",
+              position: "relative",
+              bottom: "20px",
+            }}
+          />
+        </div>
 
+      </EightPoints>
+        <div data-aos="fade-right" style={{marginLeft:"80px"}}> 
 
-    </EightPoints>
-      
+        <p style={{ fontSize: "17px", fontWeight: "700", paddingTop: "50px" }}>
+          임대 문의
+        </p>
+        <p style={{ fontSize: "17px", fontWeight: "500" }}>
+          (주)신동해홀딩스 사업관리팀
+        </p>
+        <p style={{ fontSize: "17px", fontWeight: "500" }}>
+          Tel. 031-5182-5027
+        </p>
+        <p style={{ fontSize: "17px", fontWeight: "500" }}>
+          Email:dnlee@autohub.co.kr
+        </p>
+        </div>
     </div>
   );
 }
 
 const AboutMenuPart = styled.div`
   background-color: #f11843;
+  margin-top: 20px;
 `;
 const AboutListUl = styled.ul`
   list-style: none;
   padding-left: 145px;
-  margin-top: 10px;
 `;
 const AboutList = styled.li`
   float: left;
+
   margin-left: 60px;
+
+  margin-top: 80px;
+  margin-bottom: 20px;
   color: black;
   font-weight: 900;
   font-size: 15px;
@@ -318,16 +454,19 @@ const AboutList = styled.li`
 `;
 
 const IntroPart = styled.div`
-  padding-top: 50px;
+  padding-top: 150px;
   margin-left: 85px;
+
 `;
 const AutohubImage = styled.img`
   height: 350px;
 `;
 const Comment = styled.p`
-font-family: 'Noto Sans Korean';
-font-weight: 700;
-font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 700;
+  font-size: 17px;
 `;
 const BuildArea = styled.div`
   padding-top: 50px;
@@ -394,7 +533,6 @@ const Span = styled.span`
 `;
 
 const Table = styled.table`
-  
   border-collapse: collapse;
   border-spacing: 0;
   width: 80%;
@@ -425,43 +563,43 @@ const IntroFacilities = styled.div`
   margin-left: 85px;
 `;
 const Table1 = styled.table`
-
-  border: 1;
   width: 80%;
   border: 1px solid black;
+  border-radius: 10px;
   font-size: 20px;
-  
+  height: 400px;
+  align-items: center;
+  justify-content: center;
 `;
-const Th1 =styled.th`
-  text-align: center;
-  margin: auto;
-  
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-`;
+const Th1 = styled.th``;
 const BuildingImage = styled.img`
-    width: 80px;
-    position: absolute;
-    left: 150px;
-   
-    
+  margin-top: 10px;
+  width: 80px;
 `;
 const CarImage = styled.img`
-    width: 80px;
-    position: absolute;
-    left: 150px;
-    
-    
+  width: 80px;
+  margin-top: 10px;
+  margin-left: 10px;
+`;
+const CarMaint1 = styled.img`
+  width: 100px;
+`;
+const CarMaint2 = styled.img`
+  width: 100px;
+`;
+const Food1 = styled.img`
+  width: 100px;
+`;
+const Food2 = styled.img`
+  width: 100px;
 `;
 const LocationPart = styled.div`
-padding-top: 50px;
+  padding-top: 50px;
   margin-left: 85px;
 `;
 const EightPoints = styled.div`
-    padding-top: 50px;
+  padding-top: 50px;
   margin-left: 85px;
-`;  
-
+`;
 
 export default AboutAutohub;

@@ -25,7 +25,7 @@ function Managed() {
     <div>
       
 
-      <div className="BannerPart">
+      <div className="BannerPart" style={{marginTop:"100px"}}>
         <img
           className="Banner"
           src="/images/Managed_car.png"

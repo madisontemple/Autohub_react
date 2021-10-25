@@ -24,11 +24,11 @@ function Login() {
   const GenesisClick = () => history.push("./Genesis");
 
   return (
-    <div>
+    <div style={{marginTop:"50px"}}>
       
 
-      <div className="InputPart">
-        <div className="Input" style={{ padding: "15px 130px" }}>
+      <div className="InputPart" style={{}}>
+        <div className="Input" style={{ padding: "15px 130px",marginTop:"50px" }}>
           <SearchInput type="text"></SearchInput>
           <FaSearch
             style={{

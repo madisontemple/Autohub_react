@@ -20,7 +20,7 @@ import {
 } from "../pages";
 import { SearchResult, Hyundai, Kia, Benz, Bmw, Genesis } from "../pages";
 import { Floor, Contact } from "../pages";
-import { C4F } from "../pages";
+import { C4F,C3F } from "../pages";
 import { Shop1, Shop2, Shop3, Shop4 } from "../pages";
 
 function App() {
@@ -57,6 +57,7 @@ function App() {
         <Route path="/Contact" component={Contact} />
 
         <Route path="/C4F" component={C4F} />
+        <Route path="/C3F" component={C3F} />
 
       </Switch>
     </Router>

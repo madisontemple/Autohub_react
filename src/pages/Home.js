@@ -36,7 +36,7 @@ function Home() {
     <div style={{}}>
       <Header>
         <Header2>
-          <div style={{ height: 300, display: "flex", width: "100%" }}>
+          <div style={{ height: "350px", display: "flex", width: "100%",marginTop:"30px" }}>
             <LeftImage src="/images/Autohub.HeadersLeft.png" />
 
             <SearchPart>
@@ -231,10 +231,17 @@ function Home() {
 
 const Header = styled.div`
   width: 100%;
-  width: auto;
+  max-width: 1500px;
+  min-width: 340px;
+  /* flex-wrap: initial; */
+  display: flex;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+  
   background: #f11843;
-  overflow: hidden;
-  min-width: 1500px;
+  /* overflow: hidden; */
+  
 `;
 const Menu = styled.div`
   display: flex;
@@ -294,7 +301,7 @@ const Header2 = styled.div`
 const LeftImage = styled.img`
   height: 230px;
   width: 600;
-  margin-top: 60px;
+  margin-top: 80px;
   margin-left: 70px;
 `;
 const SearchPart = styled.div`
