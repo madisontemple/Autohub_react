@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { FiArrowRightCircle } from "react-icons/fi";
-import "../index.css";
+
 
 function Home() {
   const history = useHistory();

@@ -112,6 +112,7 @@ const Menu = styled.div`
   background: #f11843;
   height: 50px;
   width: 100%;
+  
 `;
 
 const AutohubLogo = styled.img`
