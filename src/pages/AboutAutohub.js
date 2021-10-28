@@ -73,16 +73,36 @@ function AboutAutohub() {
         </AboutListUl>
       </AboutMenuPart>
 
+      
+      
       <div style={{position: "relative",marginTop:"50px"}}>
       <img   style={{ width:"100%",height:"800px",backgroundBlendMode:"tomato"}} src="/images/오토허브 건물사진.jpg"  data-aos="fade-up"/>
       
       <h1  data-aos="fade-up" style={{ color:"#f9d423",fontWeight:"bold",fontSize:"100px",position: "absolute",top:"50%",left:"50%"}}>
       <span style={{color:"#f11843"}}>오토허브</span>에 <br/>방문을 <br/>환영합니다.</h1>
-      
-
       </div>
 
+
+
+
       <IntroPart >
+
+      <Parallax>
+       <Span1 data-aos="fade-up" >오토허브에 환영합니다</Span1>
+        
+      </Parallax>
+      <ParallaxBg1>Autohub</ParallaxBg1>
+      <Parallax></Parallax>
+
+      {/* <Parallax style={{marginTop:"50px"}}>
+      <ParallaxBg1> <span data-aos="fade-up" >자동차 매매단지의 패러다임을 바꾼 오토허브입니다</span></ParallaxBg1>
+        
+      </Parallax>
+
+      <Parallax style={{marginTop:"50px"}}>
+      <ParallaxBg1> <span data-aos="fade-up" >61,000여평 규모의 최초 대형 매매단지</span></ParallaxBg1>
+        
+      </Parallax> */}
 
 
        
@@ -506,6 +526,72 @@ const AboutList = styled.li`
     transform: translate3d(0, 0.3em, 0);
   }
 `;
+
+const Parallax = styled.div`
+ position: relative;
+    background-image: url('/public/images/오토허브 건물사진.jpg');
+    height: 80%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  
+`;
+const Span1 = styled.span`
+  color:#fff;
+    font-size: 80px;
+    text-align: center;
+    position: fixed;
+    width :100%;
+    top: 20%;
+`;
+
+const ParallaxBg1 = styled.div`
+ position: relative;
+    z-index: 1;
+    height:500px;
+    background: #555;
+    font-size:60px;
+    background: #f89174;
+    padding: 100px 20px;
+    text-align :center;
+
+`;
+const ParallaxBg2 = styled.div`
+background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image:
+  url('/public/images/오토허브 건물사진.jpg')
+`;
+const ParallaxBg3 = styled.div`
+background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image:
+  url('/public/images/오토허브 건물사진.jpg')
+
+`;
+const ParallaxBg4 = styled.div`
+background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  background-image:
+  url('/public/images/오토허브 건물사진.jpg')
+
+
+`;
+
+
+
+
 
 const IntroPart = styled.div`
   
